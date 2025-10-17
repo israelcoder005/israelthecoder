@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>israel-otikeotegadorecompany
+</title>
+<link rel="icon"type="image/png" href="c:\Users\otega\Pictures\img.2.jpg">    
+
+<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <style>
+    .container-nav2 {
+      background-color: #030e4f;
+      color: white;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    .carousel {
+      position: relative;
+    }
+
+    .carousel-inner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-item {
+      position: relative;
+      display: none;
+      width: 100%;
+    }
+
+    .carousel-item.active {
+      display: block;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      right: 15%;
+      bottom: 1.25rem;
+      left: 15%;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    .carousel-indicators {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin-right: 15%;
+      margin-bottom: 1rem;
+      margin-left: 15%;
+      list-style: none;
+    }
+
+    .carousel-indicators {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 30px;
+      height: 3px;
+      padding: 0;
+      margin-right: 3px;
+      margin-left: 3px;
+      cursor: pointer;
+      background-color: #fff;
+      border: 0;
+    }
+
+    .carousel-indicators .active {
+      opacity: 1;
+    }
+    .carousel-control-next {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 15%;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+      background: none;
+      border: 0;
+    }
+    .carousel-control-next:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: 0.9;
+    }
+    .carousel-control-next-icon {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 100%;
+    }
+
+    .carousel-item img {
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .carousel-caption h5 {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      margin-top: 20px;
+    }
+
+    .carousel-caption p {
+      font-size: 25px;
+      margin-bottom: 1.5rem;
+    }
+
+    .carousel-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .carousel-caption {
+      z-index: 2;
+    }
+    .section-heading {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000033;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .property-card {
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      background-color: #fff;
+      position: relative;
+    }
+
+    .property-card:hover {
+      transform: translateY(-5px);
+    }
+    .property-image img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #000b64;
+    }
+    .price-tag {
+      position: absolute;
+      bottom: 10px;
+      left: 25%;
+      border-radius: 6px;
+      transform: translateX(-50%);
+      background-color: #000b64;
+      color: #fff;
+      padding: 6px 14px;
+      font-size: 14px;
+      font-weight: 600;
+      z-index: 10;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000033;
+      margin: 10px 15px 5px;
+  
+    }
+    .card-location {
+      font-size: 14px;
+      color: #666;
+      margin: 0 15px 15px;
+    }
+    .view-btn {
+      background-color: #000b64;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 86px;
+      font-size: 16px;
+      font-weight: 100%;
+      color: #fff;
+      margin: 0 0 4px 4px;
+      display: inline-block;
+      text-decoration: none;
+      justify-content: center;
+      white-space: nowrap;
+      margin-top: 10%;
+      height: 50px;
+      padding-left: 37px;
+     padding-right: 48px;
+    align-items: center;
+    display: flex;
+    margin-left: 2px;
+    position: relative;  
+    
+  }
+
+    .view-btn:hover {
+      background-color: #000033;
+    }
+    .pricetag {
+      margin-right: 2%;
+    }
+    .but-btn {
+      background-color: #000b64;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 86px;
+      font-size: 20px;
+      font-weight: 100%;
+      color: #fff;
+      margin: 0 0 15px 15px;
+      display: inline-block;
+      text-decoration: none;
+      margin-left: 35%;
+      margin-top: 10%;
+      height: 60px;
+      border-radius: 5px;
+    }
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://atushomes.com/assets/img/building%20exterioir2.jpg")
+          center/cover;
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+      margin-bottom: 3rem;
+    }
+    section {
+      width: 100%;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+    }
+
+    .section1 {
+      background-image: url(https://atushomes.com/assets/img/blogs.jpg);
+      color: white;
+      padding:70px;
+      text-align: left;
+      width:80%;
+      margin: 20px auto;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section1 h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .section1 p {
+      font-size: 14px;
+      margin: 0 0 10px 0;
+    }
+
+    .section1 button {
+      background-color: #ffffff;
+      color: #1e3a8a;
+      border: none;
+      padding: 8px 16px;
+      border-radius:3px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    
+    footer {
+            background-color:;
+            color: #fff;
+            padding: 40px 0 20px;
+        }
+        footer h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        footer a:hover {
+            color: #ddd;
+        }
+        .sub {
+            background-color: white;
+            color:black;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .sub:hover {
+            background-color: #0b5ed7;
+        }
+        footer .form-control {
+            background-color: white;
+            border: 1px solid #666;
+            color:black;
+        }
+        footer .form-control::placeholder {
+            color: black;
+        }
+    
+  
+  </style>
+  <body>
+    <div class="container-nav2">
+      <div class="content">
+        <p style="margin-left: 15%">
+          <i class="bi bi-flag-fill"></i>Call Us Now 24/7: +2349012131784
+          <i class="bi bi-send-fill"></i>Our Location: 16 Ekoro Oruro River
+          Street Maitama, Abuja <i class="bi bi-send-fill"></i>Connect with Us:
+          atushoomes@gmail.com
+        </p>
+      </div>
+    </div>
+    <style>
+        .custom-navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 8px 15px !important;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: #040c44 !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #040c44;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::after {
+            width: 70%;
+        }
+        
+        .custom-cta {
+            background-color: #040c44 !important;
+            color: white !important;
+            border-radius: 4px;
+            padding: 10px 20px !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .sale-btn{
+         background-color: #000b64;
+         border: none;
+        border-radius: 6px;
+          color: white;
+
+        }
+        
+        .icon-7{
+
+        margin-top: 15px;  
+        
+        }
+        
+        
+        
+        
+        
+        .custom-cta:hover {
+            background-color: #0a1a7a !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-toggler {
+            border: none;
+            padding: 5px 10px;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                margin-top: 15px;
+            }
+            
+            .nav-link {
+                padding: 10px 0 !important;
+            }
+            
+            .custom-cta {
+                margin-top: 15px;
+                display: inline-block;
+            }
+        }
+    
+    
+    </style>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                  <img src="c:\Users\otega\Pictures\img.2.jpg" alt="" width="90px" class="img">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PAYMENT SUGGESTION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">INSTRUCTION TO PORTAL</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TIMER PROPERTIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT OUR PORTAL</a>
+                    </li>
+                </ul>
+                
+                <a href="#" class="btn custom-cta">CHECK OUT OUR SCHOOL PROPERTIES</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://atushomes.com/assets/img/slide1.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>YOUR DREAM PROPERTY</h5>
+            <p style="font-size: 50px">Our Dedicated Priority</p>
+            <p>
+              Discover the perfect home with ease and confidence. At Atus Homes,
+              we connect you to properties that match your lifestyle and
+              aspirations, bringing expertise and commitment to every step of
+              your journey.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://atushomes.com/assets/img/slide2.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>FIND YOUR PERFECT SPACE</h5>
+            <p style="font-size: 50px">With Us, It’s Personal</p>
+            <p>
+              From cozy apartments to expansive estates, we bring you the finest
+              properties and a personalized approach. Your search starts here,
+              and together, we’ll make your dream home a reality.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://atushomes.com/assets/img/slide3.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>YOUR NEXT CHAPTER</h5>
+            <p style="font-size: 50px">Begins With Us</p>
+            <p>
+              We provide more than listings—we offer a pathway to your new home.
+              Our team is dedicated to understanding your needs and guiding you
+              every step of the way toward finding the ideal property.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container">
+      <h6 style="padding: 60px; font-size: 40px; text-align: center">
+        Explore Our Categories
+      </h6>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+          <img
+            style="width: 20vh; margin-left: 20%"
+            src="https://atushomes.com/assets/img/land.jpg"
+            alt=""
+          />
+          <p style="margin-left: 32%; font-size: 20px">Land</p>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+          <img
+            style="width: 20vh; margin-left: 20%"
+            src="https://atushomes.com/assets/img/residential%20home.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+          <img
+            style="width: 20vh; margin-left: 20%"
+            src="https://atushomes.com/assets/img/commercial%20building.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+          <img
+            style="width: 20vh; margin-left: 20%"
+            src="https://atushomes.com/assets/img/industrial%20building.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <section
+      style="background-color: whitesmoke; height: 100%"
+      class="featured-properties-section py-5"
+    >
+      <div class="container">
+        <p style="text-align: center; font-size: 30px">OUR PROJECT</p>
+        <h1 class="section-heading text-center mb-5">Featured Property</h1>
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card property-card h-100">
+              <div class="property-image position-relative">
+                <img
+                  style="width: 100%"
+                  src="https://atushomes.com/assets/img/property_image/property_672bc7b6e59dc9.19823974.jpg"
+                  class="card-img-top"
+                  alt="Property 1"
+                />
+                <span class="price-tag">₦120,000,000</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Modern Family Home</h5>
+                <p class="card-location text-muted">Delter asaba, Nigeria</p>
+                <a href="" class="btn sale-btn">Sale</a><br>
+                <div class="icon-7">
+                <i class="bi bi-building" style="color: black ;">4</i>
+                <i class="bi bi-cone-striped" style="color: black;">5</i>
+                <i class="bi bi-box-seam" style="color: black; margin-left: 15px;">600.00sqm</i>
+                </div>
+                <a href="#" class="btn view-btn">View Property</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card property-card h-100">
+              <div class="property-image position-relative">
+                <img
+                  style="width: 100%"
+                  src="https://atushomes.com/assets/img/property_image/property_672bc8e61e1573.34898016.jpg"
+                  class="card-img-top"
+                  alt="Property 2"
+                />
+                <span class="price-tag">₦85,000,000</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Luxury Apartment</h5>
+                <p class="card-location text-muted">Edo bening, Nigeria</p>
+                <a href="" class="btn sale-btn">Sale</a><br>
+                <div class="icon-7">
+                <i class="bi bi-building" style="color: black ;">4</i>
+                <i class="bi bi-cone-striped" style="color: black;">5</i>
+                <i class="bi bi-box-seam" style="color: black;margin-left: 15px">600.00sqm</i>
+                </div>
+                <a href="#" class="btn view-btn">View Property</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card property-card h-100">
+              <div class="property-image position-relative">
+                <img
+                  style="width: 100%"
+                  src="https://atushomes.com/assets/img/property_image/property_672bc7b6e59dc9.19823974.jpg"
+                  class="card-img-top"
+                  alt="Property 3"
+                />
+                <span class="price-tag">₦200,000,000</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Commercial Space</h5>
+                <p class="card-location text-muted">Imo owarra, Nigeria</p>
+                <a href="" class="btn sale-btn">Sale</a><br>
+                <div class="icon-7">
+                <i class="bi bi-building" style="color: black ;">4</i>
+                <i class="bi bi-cone-striped" style="color: black;">5</i>
+                <i class="bi bi-box-seam" style="color: black;margin-left: 15px">600.00sqm</i>
+                </div>
+                <a href="#" class="btn view-btn">View Property</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card property-card h-100">
+              <div class="property-image position-relative">
+                <img
+                  style="width: 100%"
+                  src="https://atushomes.com/assets/img/property_image/property_672bc8e61e1573.34898016.jpg"
+                  class="card-img-top"
+                  alt="Property 4"
+                />
+                <span class="price-tag">₦150,000,000</span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Industrial Warehouse</h5>
+                <p class="card-location text-muted">cross river calaba, Nigeria</p>
+                <a href="" class="btn sale-btn">Sale</a><br>
+                <div class="icon-7">
+                <i class="bi bi-building" style="color: black ;">4</i>
+                <i class="bi bi-cone-striped" style="color: black;">5</i>
+                <i class="bi bi-box-seam" style="color: black;margin-left: 15px">600.00sqm</i>
+                </div>
+                <a href="#" class="btn view-btn">View Property</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <a href="#" class="btn but-btn">View All Properties</a>
+      </div>
+    </section>
+    <section id="home" class="hero">
+      <h1>Atus Homes</h1>
+      <p>
+        Discover your dream property with our expert guidance and personalized
+        service. We’re dedicated <br />
+        to helping you find the perfect home or investment that suits your
+        lifestyle. <br />
+        Your future awaits—let us help make your real estate dreams a reality!
+      </p>
+    </section>
+    <section class="section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              class="img-fluid rounded shadow-sm"
+              style="height: 100%"
+              src="https://atushomes.com/assets/img/blogs.jpg"
+              alt="Atus Homes"
+            />
+          </div>
+
+          <div class="col-md-8">
+            <p>ABOUT US</p>
+            <h1 class="fw-bold mb-3">Atus Homes A Real Estate Company</h1>
+            <p class="text-muted">
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarks right at the coast of the Semantics, a
+              large language ocean.
+            </p>
+
+            <div style="padding-bottom: 8px" class="container text-center">
+              <div class="row">
+                <div style="font-size: 40px" class="col">
+                  5
+                  <p style="font-size: 20px">Years of Experience</p>
+                </div>
+                <div style="font-size: 40px" class="col">
+                  150k+
+                  <p style="font-size: 20px">Total Properties</p>
+                </div>
+                <div style="font-size: 40px" class="col">
+                  100
+                  <p style="font-size: 20px">Qualified Realtors</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 text-center">
+              <img
+                class="img-fluid rounded shadow-sm"
+                style="height: 100%"
+                src="https://atushomes.com/assets/img/slide3.jpg"
+                alt="Luxury Homes"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <p>TEAM MEMBERS</p>
+      <h5>Our Team</h5>
+      <p>
+        Meet our dedicated team of professionals committed to helping you find
+        your dream property. <br />
+        Together, we’ll make your property ownership journey smooth and
+        rewarding!
+      </p>
+    </div>
+    <div style="padding: 30px;" class="container">
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://atushomes.com/assets/img/staff_image/Ismaila.jpeg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div style="background-color: #000b64; color: white" class="card-body">
+          <h5 style="color: white" class="card-title">MD/CEO</h5>
+          <p class="card-text">Ismaila Yusuf Atus</p>
+          <a
+            href="#"
+            style="
+              background-color: white;
+              color: black;
+              border: 2px solid white;
+              padding: 12px;
+              border-radius: 6px;
+            "
+            class="btn btn-primary"
+            >Go somewhere</a
+          >
+        </div>
+      </div>
+    </div>
+    <section class="section1">
+      <h1>Find the best place for living</h1>
+      <p>
+        Discover tips and insights to identify the ideal place for your next
+        home, considering factors like <br> location, amenities, and lifestyle
+        preferences.
+      </p>
+      <button>GET IN TOUCH</button>
+    </section>
+ 
+    <section class="py-5">
+      <div class="container">
+        <h4 class="text-center mb-5">CUSTOMER'S FEEDBACK</h4>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card testimonial-card h-100">
+              <div class="card-body">
+                <p class="card-text">"I had an amazing experience! The team helped me find my dream home in Lagos, and I couldn't be happier with the service."</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-4 mb-4">
+            <div class="card testimonial-card h-100">
+              <div class="card-body">
+                <p class="card-text">"Their personalized service made all the difference. I felt supported throughout the entire process of buying my first home."</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4 mb-4">
+            <div class="card testimonial-card h-100">
+              <div class="card-body">
+                <p class="card-text">"I highly recommend their services! They helped me navigate the market and find the best property within my budget."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Latest Blog Posts</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card blog-card h-100">
+              <img src="https://atushomes.com/assets/img/blog_image/blog_672cc6efcac479.51091262.png" class="card-img-top" alt="Blog Post">
+              <div class="card-body">
+                <p class="text-muted small">Atus Homes Admin - 2024-11-07</p>
+                <h5 class="card-title">The Ultimate Guide to Buying Your First Home</h5>
+                <p class="card-text">Buying your first home is an exciting and overwhelming experience. Whether you're ready to leave the renting world behind or just looking for a new start, understanding the home-buying process is key...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card blog-card h-100">
+              <img src="https://atushomes.com/assets/img/blog_image/blog_672c46f7471823.87026006.webp" class="card-img-top" alt="Blog Post">
+              <div class="card-body">
+                <p class="text-muted small">Atus Homes Admin - 2024-11-07</p>
+                <h5 class="card-title">Why Investing in Real Estate Is Still a Smart Move in 2024</h5>
+                <p class="card-text">As we approach the end of 2024, the real estate market continues to attract investors looking for stable returns and long-term growth. In this blog post, we'll explore why investing in real estate remains...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card blog-card h-100">
+              <img src="https://atushomes.com/assets/img/blog_image/blog_672cc6efcac479.51091262.png" class="card-img-top" alt="Blog Post">
+              <div class="card-body">
+                <p class="text-muted small">Atus Homes Admin - 2024-11-07</p>
+                <h5 class="card-title">Top Tips for First-Time Home Buyers</h5>
+                <p class="card-text">A helpful guide for first-time buyers navigating the real estate market, covering everything from budgeting to finding the right home and closing the deal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+      <div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3428141.093912042!2d3.671768273933405!3d9.346419694461689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgate%20way%20computer!5e0!3m2!1sen!2sng!4v1760524865747!5m2!1sen!2sng" width="100%" height="450" style="border:0;margin-bottom: 50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+    
+      <footer>
+           <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>About Us</h5>
+                    <p>At Atus Homes, <br> we empower clients to achieve their <br> real estate goals with integrity  <br> and exceptional service, building  <br> lasting relationships and <br> vibrant communities.</p>
+                
+                  </div>
+                
+                    <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/about.php" class="text-light text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="/projects.php" class="text-light text-decoration-none">Projects</a></li>
+                        <li class="mb-2"><a href="/blogs.php" class="text-light text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="/contact.php" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+        
+            
+                  <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">T&C</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">User's Guide</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none">Support Center</a></li>
+                    </ul>
+                </div>
+                
+            
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Have a Question?</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>16, Ekoro Oruro, River Street, Maitama, Abuja</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>33 Abike Sulieman, Lekki Phase 1, Lagos</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+234 701 062 4445</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i><a href="mailto:info@atushomes.com" class="text-light text-decoration-none">info@atushomes.com</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Subscribe</h5>
+                    <form action="/subscribe" method="post">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Your email" required>
+                        </div>
+                        <button type="submit" class="sub">Subscribe</button>
+                    </form>
+                    <div class="mt-3">
+                        <h6>Follow Us</h6>
+                        <a href="https://facebook.com/atushomes" class="text-light me-3" aria-label="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="https://instagram.com/atushomes" class="text-light me-3" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://twitter.com/atushomes" class="text-light" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+              
+
+                </div>
+
+           </footer>
+
+      
+       <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
